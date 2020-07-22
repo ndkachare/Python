@@ -1,9 +1,10 @@
-name = input("What is your name? ")
-name_length = len(name)
-print(name_length)
-if name_length <3:
-    print("Name must be at least 3 characters")
-elif name_length >50:
-    print("Name must be a maximum of 50 characters")
+weight = int(input("Enter Weight: "))
+unit = input("(L)bs or (K)g: ")
+if unit.upper() =="L":
+    converted = weight*0.45
+    print(f"You are {converted} Kilos")
+elif unit.upper() =="K":
+    converted = weight // 0.45
+    print(f"You are {converted} pounds ")
 else:
-    print("Name looks good")
+    print("please chose the correct option")
