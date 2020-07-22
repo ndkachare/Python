@@ -1,9 +1,9 @@
-credit = True
-price = 10000000
-if credit:
-    print("put 10% down")
-    down_payment = 0.10 * price
+name = input("What is your name? ")
+name_length = len(name)
+print(name_length)
+if name_length <3 and name_length <=50:
+    print("Name must be at least 3 characters")
+elif name_length >50 and name_length > 3:
+    print("Name must be a maximum of 50 characters")
 else:
-    print("put 20% down")
-    down_payment = price * 0.20
-print(f"Down Payment: ${down_payment}")
+    print("Name looks good")
