@@ -1,17 +1,26 @@
-#Define a class to get the x and y coorinates
-class Point:
-    def move(self):
-        print("Move")
-    def draw(self):
-        print("Draw")
-
+#Using the inheritanc 
+class Person:
+    #using the init methord to initialize the object 
+    #created a construtor the Person object
+    def __init__(self, name):
+        #self is the reference to the current object 
+        self.name = name
+    def info(self):
+        print(f"Hi, I am {self.name}")
     
-point1 = Point()
-point1.x = 10
-point1.y = 20
-print(point1.x)
-point1.draw()
 
-point2 = Point()
-point2.x = 1
-print(point2.x)
+class Student(Person): 
+    def major(self):
+        print("English") 
+
+
+class Employee(Person):
+    def jobTitle(self):
+        print("Mathematics")
+
+
+john = Student("John Smith")
+john.info()
+john.major()
+bob = Person("Bob Smith")
+bob.info()
